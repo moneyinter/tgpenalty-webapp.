@@ -21,9 +21,14 @@
         <button id="againBtn" style="display:none;">Ещё раз</button>
     </div>
     <script>
-        const USER_ID = "{{ user_id }}";
-        const SECRET = "{{ secret }}";
-    </script>
+    // Получаем user_id и secret из строки запроса
+    function getParam(name) {
+        return new URLSearchParams(window.location.search).get(name);
+    }
+    const USER_ID = getParam("user_id") || "";
+    const SECRET = getParam("secret") || "";
+</script>
+
     <script src="game.js"></script>
 </body>
 </html>
