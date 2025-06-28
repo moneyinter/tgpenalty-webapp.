@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пенальти ⚽</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div id="game">
+        <div class="info">
+            <div id="tries"></div>
+            <div id="discount"></div>
+        </div>
+        <div class="goal-field" id="goalField">
+            <!-- Canvas/field rendered by JS -->
+            <canvas id="canvas" width="320" height="480"></canvas>
+            <div class="shoot-info" id="shootInfo"></div>
+        </div>
+        <div class="controls" id="controls"></div>
+        <button id="againBtn" style="display:none;">Ещё раз</button>
+    </div>
+    <script>
+        const USER_ID = "{{ user_id }}";
+        const SECRET = "{{ secret }}";
+    </script>
+    <script src="game.js"></script>
+</body>
+</html>
